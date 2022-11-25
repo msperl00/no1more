@@ -3,6 +3,7 @@ import Documentation from '../views/Documentation.vue'
 import NotFound from '../views/NotFound.vue'
 import GlobalDetails from '../views/GlobalDetails.vue'
 import Form from '../views/Form.vue'
+import HomeViolencia from '../views/HomeViolencia.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -21,6 +22,11 @@ export const routes = [
     path: '/tracker',
     meta: { title: 'Global Details' },
     component: GlobalDetails,
+  },
+  {
+    path: '/datosViolencia',
+    meta: { title: 'Home Violencia' },
+    component: HomeViolencia,
   },
   { path: '/:path(.*)', component: NotFound },
 ]
