@@ -2,9 +2,9 @@
   <div>
     <div class="flex flex-col">
       <div class='flex flex-grow font-anton'>
-        <div class="w-1/2 p-5 min-h-screen  text-center  bg-violet-500  hover:from-violet-400 hover:to-violet-500 bg-gradient-to-r ">
-          <router-link to="/" class="first-letter:file:placeholder:before:whitespace-nowrap dark:text-white text-white tracking-widest ml-5">
-            <p class="text-5xl uppercase  font-bold"> Violencia de género</p>
+        <div class="w-1/2 p-5 min-h-screen  text-center  bg-violet-500  hover:from-violet-400 hover:to-violet-600 bg-gradient-to-r ">
+          <router-link to="/violenciadegenero" class="first-letter:file:placeholder:before:whitespace-nowrap dark:text-white text-white tracking-widest ml-5">
+            <p class="text-5xl uppercase  font-bold">Violencia de género</p>
            <div class="container flex flex-col mt-10 p-2 text-justify font-console ">
             <h1 class="mt-2 text-2xl leading-6 tracking-tight text-black sm:text-3xl">¿Qué entendemos por violencia de género?</h1>
             <div class="mt-5 text-lg">
@@ -14,8 +14,8 @@
           </div>
         </router-link>
         </div>
-        <div class="w-1/2 p-5  min-h-screen text-center bg-blue-500  hover:from-blue-500 hover:to-blue-600 bg-gradient-to-r  ">
-          <router-link to="/" class="first-letter:file:placeholder:before:whitespace-nowrap dark:text-white text-white tracking-widest ml-5">
+        <div class="w-1/2 p-5  min-h-screen text-center bg-amber-500  hover:from-amber-400 hover:to-amber-600 bg-gradient-to-r  ">
+          <router-link to="/violenciadomestica" class="first-letter:file:placeholder:before:whitespace-nowrap dark:text-white text-white tracking-widest ml-5">
             <p class="text-5xl uppercase  font-bold"> Violencia doméstica </p>
              <div class="container flex flex-col  font-light mt-10 p-2 text-justify  font-console tracking-tight ">
               <h1 class="mt-2 text-2xl leading-6 tracking-tight text-black sm:text-3xl">¿Qué entendemos por violencia doméstica?</h1>

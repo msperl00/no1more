@@ -20,7 +20,7 @@
       </div><!-- Importante en el responsive este flexstart -->
       <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart ">
         <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
-          <router-link to="/datosViolencia"
+          <router-link to="/violencia"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
             Go track
           </router-link>

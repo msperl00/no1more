@@ -5,7 +5,7 @@
 
     <div class="container flex">
       <h2 class="text-3xl text-white font-bold  leading-9 tracking-wide sm:text-4xl sm:leading-10 pl-12">
-        <i class="fa fa-viruses mr-3 h-10 mb-3"></i>
+        <i class="fa fa-venus-mars mr-3 h-10 mb-3"></i>
         Documentation
 
         <p class="text-lg font-light ml-16">Api by <a class="text-indigo-500" href="https://https://servicios.ine.es/">Instituto nacional de estadística</a>
