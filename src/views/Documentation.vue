@@ -5,10 +5,10 @@
 
     <div class="container flex">
       <h2 class="text-3xl text-white font-bold  leading-9 tracking-wide sm:text-4xl sm:leading-10 pl-12">
-        <i class="fa fa-viruses mr-3 h-10 mb-3"></i>
+        <i class="fa fa-venus-mars mr-3 h-10 mb-3"></i>
         Documentation
 
-        <p class="text-lg font-light ml-16">Api by <a class="text-indigo-500" href="https://disease.sh/">covid19Api</a>
+        <p class="text-lg font-light ml-16">Api by <a class="text-indigo-500" href="https://https://servicios.ine.es/">Instituto nacional de estadística</a>
         </p>
 
       </h2>
@@ -80,11 +80,11 @@
               </svg>
               <div class="container ml-3 text-justify">
                 <p class="font-light">
-                I really be happy develop this web app, which can be used to verify data and contents about how the pandemy change our life
-                <code class="bg-indigo-100 px-1 py-0.5 rounded text-red-600">Covid-19</code> 
+                I really be happy develop this web app, which can be used to verify data and estadistics about how bad things heppend daily
+                <code class="bg-indigo-100 px-1 py-0.5 rounded text-red-600">no1more</code> 
               </p>
               <p class="flex font-light">
-                 Unfortunately, the world must live with that forever.
+                 I'm soure that we can change the world.
               </p>
               </div>
             </div>

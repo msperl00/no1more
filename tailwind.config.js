@@ -9,7 +9,9 @@ module.exports = {
         sans: ['"Helvetica"', ...defaultTheme.fontFamily.sans],
         lora: ["'Lora', serif"],
         dm: "'DM Mono', monospace",
-        console: "'Lucida Console', 'Courier New', monospace", 
+        console: "'Lucida Console', 'Courier New', monospace",
+        rubik: "'Rubik Glitch', 'cursive'",
+        anton: "'Anton', 'sans-serif'"
       },
        height: theme => ({
         "screen-map": "120vh",

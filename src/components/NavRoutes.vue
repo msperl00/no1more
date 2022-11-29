@@ -1,33 +1,35 @@
 <template>
   <div v-if="flag">
     <div
-    class="bg-gray-600 mx-auto max-w-screen pl-10 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
+      class="bg-gray-600 mx-auto max-w-screen pl-10 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
 
-    <div class="container flex">
-      <h2 class="text-3xl text-white font-bold pt-5 md:pt-0 leading-9 tracking-wide sm:text-4xl sm:leading-10 pl-12 uppercase">
-      
-        Be ready to  <span class="text-red-500">track covid </span>
-<!--        <i class="  fas fa-question fa-2xl"></i>
+      <div class="container flex">
+        <h2
+          class="text-3xl text-white font-bold pt-5 md:pt-0 leading-9 tracking-wide sm:text-2xl sm:leading-10 pl-12 uppercase">
+
+          Estadísticas y datos sobre <span class="text-red-500">la violencia</span> <span class="text-violet-600">de
+            género y doméstica</span>
+          <!--        <i class="  fas fa-question fa-2xl"></i>
  -->
-      </h2>
-       <button id="PopUp " @click="() => TogglePopup('buttonTrigger')"
+        </h2>
+        <button id="PopUp " @click="() => TogglePopup('buttonTrigger')"
           class="lg:block items-center justify-center mx-10 text-3xl text-gray-300 ">
           <i class="fa fa-notes-medical"></i> </button>
-      <button @click="toggle">
-      </button>
-    </div><!-- Importante en el responsive este flexstart -->
-    <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart ">
-      <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
-        <router-link to="/tracker"
-          class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-          Go track
-        </router-link>
+        <button @click="toggle">
+        </button>
+      </div><!-- Importante en el responsive este flexstart -->
+      <div id="BackHome" class="mt-8 flex flex-row lg:mt-0 lg:flex-shrink-0 flexstart ">
+        <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
+          <router-link to="/violencia"
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
+            Go track
+          </router-link>
 
-        <ButtonRepo />
-        
+          <ButtonRepo />
+
+        </div>
       </div>
     </div>
-  </div>
     <!-- Better rendering with teleport -->
     <Teleport to="body">
       <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')">
@@ -53,7 +55,7 @@
     </Teleport>
   </div>
   <div v-else>
-    <div class="bg-gray-600 relative flex flex-row-reverse h-32">
+    <div class="bg-gray-600 mx-auto max-w-screen pl-10 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-6 lg:px-8  md:flex md:items-center md:justify-between md:py-6 md:px-8">
       <div class="flex-initial flex w-72 mx-1 my-1 flexstart min-w-full sm:min-w-0">
         <div class="inline-flex">
           <router-link to="/" class="inline-flex  tracking-wider rounded-md  border border-transparent btn text-base ">
@@ -123,5 +125,6 @@ export default {
 </script>
 
 <style>
+
 </style>
 
