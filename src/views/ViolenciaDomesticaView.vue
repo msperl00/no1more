@@ -21,9 +21,7 @@
 
   <div class="py-12 min-h-screen">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-6xl">
-     
-      
-    </div>
+     </div>
   </div>
 
 </template>

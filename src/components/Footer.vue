@@ -1,6 +1,6 @@
 <template>
 
-  <body class="overflow-hidden bottom-0 w-full bg-gray-700">
+  <body class="overflow-hidden bottom-0 w-full">
     <div class="mx-auto py-6 xl:px-20 lg:px-12 sm:px-6 px-4 ">
       <div class="flex items-center justify-between">
         <div class="flex space-x-5 text-xl text-gray-200 mr-5">
@@ -14,7 +14,7 @@
 
         </div>
         <div class="xl:flex items-center italic hidden font-light ">
-          <p>Copyright © 2022 marcosperanzalopez | All rights reserved</p>
+          <p>Copyright  &copy; 2022 marcosperanzalopez | All rights reserved</p>
         </div>
         <div class="flex items-center gap-x-5 ">
           <a href="https://www.instagram.com/itamarco14/"
