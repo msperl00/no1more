@@ -8,7 +8,7 @@
 
         Violencia de género
       </h2>
-
+     
       <button @click="toggle">
       </button>
     </div>
@@ -31,11 +31,12 @@
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Victimas de maltrato (desde el 1 de enero de 2003 hasta {{ anyo }}): {{
             victimas
         }} </p>
-        <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Feminicidios desde el 1 de enero de 2022: 38 </p>
+        <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Mujeres fallecidadas desde el 1 de enero de 2022: {{ asesinatos }} </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Mujeres fallecidas en el último año ({{anyo}}): {{feminicidios}} </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid mb-3"> Condenados (hasta 1 de enero de {{anyo}}): {{condenados}} </p>
         <span class="text-xs italic text-red-500  ">Last update: {{ lastUpdate() }}</span>
       </div>
+      
     </div>
    <ContainerViolencia />
   </div>
@@ -46,7 +47,7 @@
 <script>
 import ContainerViolencia from "@/components/ContainerViolencia.vue"
 import SidebarViolencia from "@/components/SidebarViolencia.vue"
-import { reactive, toRefs, ref, inject, onMounted, isRef } from 'vue'
+import { reactive, toRefs, ref, inject, onMounted, onActivated, onUpdated, onBeforeMount, isRef } from 'vue'
 
 export default {
   name: "ViolenciaDomestica",
@@ -58,9 +59,12 @@ export default {
     let getVictimas = ref([]);
     let getCondenados = ref([]);
     let getMuertes = ref([]);
+    let getAsesinatos = ref([]);
     let condenados = ref(0);
     let victimas = ref(0);
     let feminicidios = ref(0);
+    let asesinatos = 47;
+    
 
     async function getVictimasViolenciaDeGenero() {
       const response = await fetch('https://servicios.ine.es/wstempus/js/es/DATOS_TABLA/34967?nult=1&det=2');
@@ -76,9 +80,15 @@ export default {
 
     async function getFeminicidiosViolenciaDeGenero() {
       const response = await fetch('https://servicios.ine.es/wstempus/js/es/DATOS_TABLA//t00/mujeres_hombres/tablas_1/l0/v02001.px?tip=AM');
-      getCondenados.value = await response.json();
-      return getCondenados.value;
+      getMuertes.value = await response.json();
+      return getMuertes.value;
     }
+
+    /* async function getAsesinatosViolenciaDeGenero() {
+      const response = await fetch('');
+      getAsesinatos.value = await response.json();
+      return getAsesinatos.value;
+    } */
 
     function lastUpdate() {
 
@@ -88,21 +98,23 @@ export default {
       let dia = fecha.getDate();
       let mes = meses[fecha.getMonth()];
       let agno = fecha.getFullYear();
+      
 
       return (dia + " de " + mes + " de " + agno);
     }
 
 
-    onMounted(
+    onBeforeMount(
       async () => {
         getVictimasViolenciaDeGenero().then(
 
           function (response) {
+            
             // Utilizado para la inserción del punto en las unidades
             victimas.value = new Intl.NumberFormat('de-DE').format(response[0].Data[0].Valor);
             console.log(response[0].Data[0]);
             anyo.value = response[0].Data[0].Anyo
-            loading.value = false;
+
             return victimas.value;
           },
           function (err) {
@@ -115,7 +127,7 @@ export default {
           condenados.value = new Intl.NumberFormat('de-DE').format(response[0].Data[0].Valor);
           console.log(response[0].Data[0]);
           anyo.value = response[0].Data[0].Anyo
-          loading.value = false;
+        
           return condenados.value;
         },
           function (err) {
@@ -126,15 +138,31 @@ export default {
           // Utilizado para la inserción del punto en las unidades
           feminicidios.value = new Intl.NumberFormat('de-DE').format(response[0].Data[0].Valor);
           console.log(response[0].Data[0]);
-          loading.value = false;
+        
           return feminicidios.value;
         },
           function (err) {
             alert(err.message);
           });
+
+       /*    getAsesinatosViolenciaDeGenero().then(function (response) {
+          // Utilizado para la inserción del punto en las unidades
+          asesinatos.value = new Intl.NumberFormat('de-DE').format(response[0].Data[0].Valor);
+          console.log(response[0].Data[0]);
+          return asesinatos.value;
+        },
+          function (err) {
+            alert(err.message);
+          }); */
       })
 
-    return { lastUpdate, getVictimasViolenciaDeGenero, getCondenadosViolenciaDeGenero, getFeminicidiosViolenciaDeGenero, victimas, anyo, condenados, feminicidios }
+      onMounted(() => {
+          // Quitamos el spinner
+          //loading.val = false;
+      }
+      )
+
+    return { lastUpdate, getVictimasViolenciaDeGenero, getCondenadosViolenciaDeGenero, getFeminicidiosViolenciaDeGenero, /* getAsesinatosViolenciaDeGenero, */ victimas, anyo, condenados, feminicidios,  asesinatos  }
   },
 };
 </script>
