@@ -38,7 +38,7 @@
       </div>
       
     </div>
-   <ContainerViolencia />
+   <ContainerViolencia/>
   </div>
 
 </template>
@@ -47,6 +47,7 @@
 <script>
 import ContainerViolencia from "@/components/ContainerViolencia.vue"
 import SidebarViolencia from "@/components/SidebarViolencia.vue"
+import Spinner from "@/components/Spinner.vue";
 import { reactive, toRefs, ref, inject, onMounted, onActivated, onUpdated, onBeforeMount, isRef } from 'vue'
 
 export default {
@@ -63,7 +64,7 @@ export default {
     let condenados = ref(0);
     let victimas = ref(0);
     let feminicidios = ref(0);
-    let asesinatos = 47;
+    let asesinatos = 48;
     
 
     async function getVictimasViolenciaDeGenero() {
@@ -81,6 +82,7 @@ export default {
     async function getFeminicidiosViolenciaDeGenero() {
       const response = await fetch('https://servicios.ine.es/wstempus/js/es/DATOS_TABLA//t00/mujeres_hombres/tablas_1/l0/v02001.px?tip=AM');
       getMuertes.value = await response.json();
+      loading.val = false;
       return getMuertes.value;
     }
 
@@ -156,11 +158,7 @@ export default {
           }); */
       })
 
-      onMounted(() => {
-          // Quitamos el spinner
-          //loading.val = false;
-      }
-      )
+     
 
     return { lastUpdate, getVictimasViolenciaDeGenero, getCondenadosViolenciaDeGenero, getFeminicidiosViolenciaDeGenero, /* getAsesinatosViolenciaDeGenero, */ victimas, anyo, condenados, feminicidios,  asesinatos  }
   },
