@@ -5,7 +5,7 @@
     <div class="container flex">
       <h2
         class="text-3xl text-white font-bold pt-5 md:pt-0 leading-9 tracking-wide sm:text-2xl sm:leading-10 pl-12 uppercase">
-        Violencia doméstica
+        Donato sarà un bravo ragazzo
       </h2>
       <button @click="toggle">
       </button>
