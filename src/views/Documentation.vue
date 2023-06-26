@@ -67,7 +67,7 @@
              <blockquote class="relative bg-gray-100 rounded-lg shadow-lg">
           <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
             <div class="flexstart justify-start  ">
-               <img src="/public/images/Coronavirus/conona-alert-white.png" alt="Work" class="h-12 mr-5" />
+               <img src="/public/images/favicon.png" alt="Work" class="h-12 mr-5" />
                 <p class="text-xl font-lora text-indigo-600 font-bold tracking-wider uppercase"> 
              Covid Tracker
              <i class="fa-brands fa-vuejs mr-3  mb-3"></i>
