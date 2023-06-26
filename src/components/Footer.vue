@@ -3,6 +3,12 @@
   <body class="overflow-hidden bottom-0 w-full">
     <div class="mx-auto py-6 xl:px-20 lg:px-12 sm:px-6 px-4 ">
       <div class="flex items-center justify-between">
+        <img alt="#016" class="items-center mx-auto mb-5"
+          src="https://violenciagenero.igualdad.gob.es/diseno/img/016ParaTodas.png" width="450" height="350" />
+        <img alt="#016" class="items-center mx-auto mb-5"
+          src="https://violenciagenero.igualdad.gob.es/informacionUtil/PuntoVioleta/img/PegatinaPVioleta.jpg" width="250" height="350" />
+      </div>
+      <div class="flex items-center justify-between">
         <div class="flex space-x-5 text-xl text-gray-200 mr-5">
 
           <i class="fa-solid fa-mars h-8  "></i>
@@ -13,8 +19,9 @@
           <i class="fa-solid fa-venus h-8 mr-5"></i>
 
         </div>
+
         <div class="xl:flex items-center italic hidden font-light ">
-          <p>Copyright  &copy; 2022 marcosperanzalopez | All rights reserved</p>
+          <p>Copyright &copy; 2022 marcosperanzalopez | All rights reserved</p>
         </div>
         <div class="flex items-center gap-x-5 ">
           <a href="https://www.instagram.com/itamarco14/"
@@ -37,6 +44,7 @@
           </a>
         </div>
       </div>
+
     </div>
   </body>
 
@@ -52,5 +60,6 @@ export default {
 </script>
 
 <style>
+
 </style>
 
