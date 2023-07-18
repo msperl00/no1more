@@ -1,20 +1,23 @@
-name: First workflow
 
-on: [push, pull_request]
-
+name: Deploy to Netlify
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1
+        with:
+          publish-dir: ./dist
+          deploy-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
-      - name: Hello Codelies!
-        run: echo "Hello!!!! from ${{ github.workflow }} triggered by the ${{ github.event_name }} done by ${{ github.actor }}"
-
-      - name: 😊 More and more
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: |
-          echo "Job Contextttt: $JOB_CONTEXT"
-          echo "Done!"
+          

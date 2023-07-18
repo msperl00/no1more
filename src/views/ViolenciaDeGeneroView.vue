@@ -16,7 +16,7 @@
       <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-          Back Home</router-link>
+          Volver</router-link>
         <ButtonRepo />
       </div>
     </div>
@@ -25,13 +25,14 @@
   <div class="py-12 min-h-screen">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-6xl ">
       <h1
-        class="text-xl font-bold pt-5 md:pt-0 leading-9 tracking-wide sm:text-xl sm:leading-10  border-t-2  border-b-2 border-solid border-black">
+        class="text-xl font-bold  md:pt-0 leading-9 tracking-wide sm:text-xl sm:leading-10  border-t-2  border-b-2 border-solid border-black">
         PRINCIPALES CIFRAS DE LA VIOLENCIA DE GENERO EN ESPAÑA</h1>
       <div class="mt-8 mx-auto lg:max-w-5xl lg:mx-0 lg:pr-64 flex flex-col">
+        <p class="text-lg text-justify	font-dm border-b-2  border-red-600 border-solid "> TOTAL MUJERES VÍCTIMAS MORTALES 2003 - 2023: 1.212 </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Victimas de maltrato (desde el 1 de enero de 2003 hasta {{ anyo }}): {{
             victimas
         }} </p>
-        <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Mujeres fallecidadas desde el 1 de enero de 2022: {{ asesinatos }} </p>
+        <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Mujeres fallecidadas desde el 1 de enero de 2023: {{ asesinatos }} </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Mujeres fallecidas en el último año ({{anyo}}): {{feminicidios}} </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid mb-3"> Condenados (hasta 1 de enero de {{anyo}}): {{condenados}} </p>
         <span class="text-xs italic text-red-500  ">Last update: {{ lastUpdate() }}</span>
@@ -64,7 +65,7 @@ export default {
     let condenados = ref(0);
     let victimas = ref(0);
     let feminicidios = ref(0);
-    let asesinatos = 48;
+    let asesinatos = 28;
     
 
     async function getVictimasViolenciaDeGenero() {
@@ -85,12 +86,6 @@ export default {
       loading.val = false;
       return getMuertes.value;
     }
-
-    /* async function getAsesinatosViolenciaDeGenero() {
-      const response = await fetch('');
-      getAsesinatos.value = await response.json();
-      return getAsesinatos.value;
-    } */
 
     function lastUpdate() {
 

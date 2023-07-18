@@ -20,7 +20,7 @@
       <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-          Back Home
+          Volver
         </router-link>
 
         <ButtonRepo />

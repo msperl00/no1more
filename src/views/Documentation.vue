@@ -19,7 +19,7 @@
       <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-          Back Home</router-link>
+          Volver</router-link>
            <ButtonRepo />
       </div>
     </div>
@@ -33,7 +33,7 @@
         </h1>
       </div>
       <div class="mt-8 mx-auto lg:max-w-5xl lg:mx-0 lg:pr-64">
-        <p class="text-lg text-gray-500 text-justify	font-dm">It's almost 2022 and we still don't know if there is
+        <p class="text-lg text-gray-500 text-justify	font-dm">It's almost 2023 and we still don't know if there is
           aliens living among us, or
           do we? Maybe the person writing this is an alien, or a software developer lack of imagination.
           I used to say that I became an engineer because of my lack of imagination...
@@ -67,9 +67,9 @@
              <blockquote class="relative bg-gray-100 rounded-lg shadow-lg">
           <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
             <div class="flexstart justify-start  ">
-               <img src="/public/images/favicon.png" alt="Work" class="h-12 mr-5" />
+               <img src="/public/images/no1more.png" alt="Work" class="h-12 mr-5" />
                 <p class="text-xl font-lora text-indigo-600 font-bold tracking-wider uppercase"> 
-             Covid Tracker
+             no1more
              <i class="fa-brands fa-vuejs mr-3  mb-3"></i>
             </p>
             </div>

@@ -3,10 +3,10 @@
     <nav class="w-full text-white shadow relative  bg-gray-700 px-6 h-16 flex border-b ">
         <div class="mr-10 flex items-center">
                 <router-link to="/" >
-                     <i class="flex fa-solid fa-3x fa-venus-mars"></i>
+                    <img class="h-14 w-14" src="../../public/images/no1more.png" alt="no1more logo">
                 </router-link>
             <p class="text-4xl font-bold font-rubik whitespace-nowrap dark:text-white tracking-widest ml-5">
-                NO1 MORE
+                NO1MORE
             </p>
         </div>
         <div class="flex flex-row items-center h-full font-semibold tracking-widest ">

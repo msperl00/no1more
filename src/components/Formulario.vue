@@ -33,17 +33,6 @@
                             <div class="form-group mb-6">
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="hidden" name="_captcha" value="false">
-                                <!--<input type="hidden" name="_next" value="https://virus-covid19tracker.netlify.app/suggestions">-->
-                                <!-- Only with recaptcha -->
-                                <!--   <input type="hidden" name="_autoresponse" value="your custom message">  -->
-                                <!-- <input type="hidden" name="_subject" value="COVIDTRACKER SUGGESTIONS-TIPS"> -->
-                                <!--<input type="hidden" name="_template" value="table">-->                                
-                                <!--   <p class="font-light pb-4" v-if="errors.length">
-                                    <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
-                                <ul>
-                                    <li class="text-red-600" v-for="error in errors">{{ error }}</li>
-                                </ul>
-                                </p> -->
 
                                 <table class="text-left font-light">
                                     <thead>
@@ -177,7 +166,6 @@ export default {
                 this.errors = [];
                 return true;
             }
-
             this.errors = [];
 
             if (!this.vote) {
@@ -197,11 +185,7 @@ export default {
             if (!this.message) {
                 this.errors.push('Maybe a little massage?');
             }
-
-
-
         }
-
         function validEmail(email) {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
@@ -210,7 +194,7 @@ export default {
         function onSubmit() {
             console.log('In send prevent');
             /*  todo validate email + errors + message success */
-            fetch("https://formsubmit.co/ajax/de7a638ad429ee242caaccf430838086", {
+            fetch("https://formsubmit.co/ajax/7a475fa436767b362d917b82ce433969", {
                 method: "POST", 
                 headers: {
                     'Content-Type': 'application/json',
@@ -223,7 +207,7 @@ export default {
                     email: this.email,
                     message: this.message,
                     _template: 'table',
-                    _subject: 'COVIDTRACKER SUGGESTIONS-TIPS'
+                    _subject: 'NO1MORE SUGGESTIONS-TIPS'
                 })
             })
                 .then(response => response.json())

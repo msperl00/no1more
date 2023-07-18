@@ -3,8 +3,8 @@
    <NavRoutes v-bind:flag="true"/>
     <div class="max-h-screen flex flex-col"></div>
       <div class='relative flex flex-grow'>
-        <Sidebar :global="false" />
           <!-- KeepAlive -->
+          
         <Map  />
   </div>
 </div>

@@ -13,7 +13,7 @@
 export default {
     name: 'CountrySelect',
     props: ['countries'],
-    emits: ["get-country", "get-title"],
+    s: ["get-country", "get-title"],
     setup(props, context) {
 
 

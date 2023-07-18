@@ -21,7 +21,7 @@
         </div>
 
         <div class="xl:flex items-center italic hidden font-light ">
-          <p>Copyright &copy; 2022 marcosperanzalopez | All rights reserved</p>
+          <p>Copyright &copy; 2023 marcosperanzalopez | All rights reserved</p>
         </div>
         <div class="flex items-center gap-x-5 ">
           <a href="https://www.instagram.com/itamarco14/"

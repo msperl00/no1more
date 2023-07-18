@@ -22,7 +22,7 @@
         <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
           <router-link to="/violencia"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-            Go track
+            Ver estadisticas
           </router-link>
 
           <ButtonRepo />
@@ -32,26 +32,31 @@
     </div>
     <!-- Better rendering with teleport -->
     <Teleport to="body">
-      <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')">
-        <p class="font-normal text-indigo-500  tracking-wide uppercase mb-5 underline underline-offset-2">How to use it
-        </p>
-        <p class="text-lg text-gray-500 text-justify font-light">
-          1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')">
+    <p class="font-normal text-indigo-500  tracking-wide uppercase mb-5 underline underline-offset-2">
+      Cómo utilizarlo
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      1. <b>Navega por el mapa:</b> Puedes hacer clic y arrastrar el mapa para moverte por diferentes áreas.
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      2. <b>Zoom:</b> Usa la rueda de tu ratón para hacer zoom in y zoom out en el mapa. Alternativamente, puedes utilizar los botones "+" y "-" que se encuentran en la esquina superior derecha del mapa.
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      3. <b>Información sobre regiones:</b> Al mover el cursor sobre una región, se resaltará y mostrará un cuadro emergente con información específica sobre violencia de género o violencia doméstica en esa región, dependiendo de lo que hayas seleccionado.
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      4. <b>Selección de datos:</b> En la parte izquierda de la pantalla, encontrarás dos botones. Uno para seleccionar el tipo de violencia "Violencia de género" y otro para "Violencia doméstica". Al hacer clic en uno de estos botones, el mapa se actualizará con los datos correspondientes a la opción seleccionada.
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      5. <b>Desactivar/Activar capas:</b> Si haces clic nuevamente en el botón de "Violencia de género" o "Violencia doméstica" después de haberlo seleccionado, se desactivará la capa de datos correspondiente, volviendo al mapa sin datos específicos.
+    </p>
+    <p class="text-lg text-gray-500 text-justify font-light mb-4">
+      <b>Recuerda:</b> Los datos presentados en este mapa son solo para fines informativos y pueden no reflejar las cifras actuales o completas en tiempo real.
+    </p>
+</Popup>
 
-        </p>
-        <p class="text-lg text-gray-500 text-justify font-light">
-          2. Sed nec sapien id purus mattis ornare.
-          Proin vitae nisl at elit finibus pharetra.
-        </p>
-        <p class="text-lg text-gray-500 text-justify font-light">
-          3. Vestibulum vestibulum mi a dolor sollicitudin, ac molestie nibh consectetur.
 
-        </p>
-        <p class="text-lg text-gray-500 text-justify font-light">
-          4. Nunc placerat nulla a interdum accumsan.
-          Suspendisse sed ex in nisl maximus rutrum in vitae ipsum.
-        </p>
-      </Popup>
     </Teleport>
   </div>
   <div v-else>

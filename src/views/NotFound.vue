@@ -6,8 +6,8 @@
     <div class="container flex">
       <h2 class="text-6xl text-white font-bold  leading-9 tracking-wide sm:leading-10 pl-12">
         Ooppsss!
-        <p class=" flex text-lg font-light mt-5 ">You have found a page that doesn't
-          <span class="flex  mx-2 text-indigo-500">exists</span>
+        <p class=" flex text-lg font-light mt-5">Has encontrado una página que no
+          <span class="flex  mx-2 text-indigo-500">existe</span>
         </p>
       </h2>
       <button @click="toggle">
@@ -22,33 +22,32 @@
         <div class="border-t border-gray-300 text-center pt-8">
           <h1 class="text-9xl font-bold text-indigo-400">404</h1>
              
-                <i class="fa-solid fa-flask fa-2xl mx-16"></i>  
-                <i class="fa-solid fa-flask fa-2xl mx-16"></i>  
-                <i class="fa-solid fa-flask fa-2xl mx-16"></i>  
-                <i class="fa-solid fa-flask fa-2xl mx-16"></i>  
-                <i class="fa-solid fa-flask fa-2xl mx-16"></i>  
+                <i class="fa-solid fa-mars fa-2xl mx-16"></i>  
+                <i class="fa-solid fa-mars fa-2xl mx-16"></i>  
+                <i class="fa-solid fa-mars fa-2xl mx-16"></i>  
+                <i class="fa-solid fa-mars fa-2xl mx-16"></i>  
+                <i class="fa-solid fa-mars fa-2xl mx-16"></i>  
              
                
-          <h1 class="text-6xl  py-8 font-mono font-bold">Page not found</h1>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
-            <i class="fa-solid fa-virus h-8 fa-2xl px-16"></i>
+          <h1 class="text-4xl  py-8 font-mono font-bold uppercase">Page not found</h1>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
+            <i class="fa-solid fa-venus h-8 fa-2xl px-16"></i>
             
             
           
-          <p class="text-xl mt-8 text-gray-600 pb-8 px-12 font-mono">The page you are looking for does not exist. It might have been
-            moved or deleted.</p>
+          <p class="text-xl mt-8 text-gray-600 pb-8 px-12 font-mono">La página que estas buscando no existe o ha sido eliminada.</p>
        
           <button
             class="bg-gradient-to-r shadow from-indigo-400 to-indigo-600 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6">
-            HOME
+            Vuelve a la página principal
           </button>
           <button
             class="bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-500 text-white font-semibold px-6 py-3 rounded-md">
-            Contact Us
+            Contacta con nostros
           </button>
         
         </div>

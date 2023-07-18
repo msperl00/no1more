@@ -14,7 +14,7 @@
       <div class="inline-flex rounded-md md:flex-row md:space-x-8 md:mt-0 md:text-sm ">
         <router-link to="/"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base btn">
-          Back Home</router-link>
+          Volver</router-link>
         <ButtonRepo />
       </div>
     </div>
@@ -27,7 +27,7 @@
         PRINCIPALES CIFRAS DE LA VIOLENCIA DOMÉSTICA EN ESPAÑA</h1>
       <div class="mt-8 mx-auto lg:max-w-5xl lg:mx-0 lg:pr-64 flex flex-col">
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Victimas totales (desde
-          el 1 de enero de 2011 hasta 2022): {{victimas}} </p>
+          el 1 de enero de 2011 hasta 2023): {{victimas}} </p>
           <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Victimas que son hombres: {{victimasHombres }} </p>
           <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Victimas que son mujeres: {{ victimasMujeres}} </p>
         <p class="text-lg text-justify	font-dm border-b-2  border-neutral-300 border-solid"> Denuncias

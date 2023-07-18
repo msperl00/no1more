@@ -1,37 +1,7 @@
 <template>
   <div
     class="lg:flex inset-0 transform lg:transform-none lg:opacity-100  lg:relative z-10  bg-gray-700 text-white min-h-screen p-3 pt-5 border-t-2 border-b-2">
-    <div v-if="global">
-      <transition name="slide-fade">
-        <nav v-if="true">
-          <button
-          id="Global"
-            class="block  px-1 py-2 mb-4 bg-green-600 hover:bg-green-500  w-full text-lg font-bold tracking-wider	uppercase border"
-            @click="intersected(null, $event)"> Global </button>
-          <ul class="scroll-container">
-            <li v-for="(country, i) in countries" :key="i" :id="country.country">
-              <button
-                class="block  px-1 py-2 hover:bg-indigo-800 active:text-green-500 w-full font-mono" @click="intersected(country, $event)
-                ">{{ country.country }}</button>
-            </li>
-          </ul>
-        </nav>
-      </transition>
-    </div>
-    <div v-else>
-      <transition name="slide-fade">
-        <nav v-if="true">
-          <!--  visibility -->
-          <ul class="mt-8">
-            <!-- TODO BOTONES -->
-            <li class="divide-y divide-slate-200">
-             
-
-            </li>
-          </ul>
-        </nav>
-      </transition>
-    </div>
+    
   </div>
 
 </template>
