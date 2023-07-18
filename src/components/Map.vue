@@ -113,8 +113,8 @@ const toggleGeojsonLayerDomestica = () => {
 
         onMounted(async () => {
             // Fetch the GeoJSON data
-             comunidadesGenero = await fetch('/spain-gender-violence.geojson').then(res => res.json());
-            comunidadesDomestica = await fetch('/spain-domestic-violence.geojson').then(res => res.json());
+             comunidadesGenero = await fetch('/spain-gender-violence.geojson').then(res => res.json()).catch(error => console.error('Error al cargar el archivo geojson:', error));;
+            comunidadesDomestica = await fetch('/spain-domestic-violence.geojson').then(res => res.json().catch(error => console.error('Error al cargar el archivo geojson:', error)););
            
             console.log(comunidadesDomestica);
 
@@ -190,8 +190,8 @@ const toggleGeojsonLayerDomestica = () => {
         onEachFeature: function (feature, layer) {
             if (feature.properties) {
                 layer.bindPopup("<h2>" + feature.properties.noml_ccaa + "</h2>" +
-                    "<p>Desde el año 2011, se han registrado <strong>"+
-                    "</strong> víctimas de violencia doméstica.</p>" +
+                    "<p>Desde el año 2011, se han registrado <strong>"+ feature.properties.violence_victims +
+                    "</strong> víctimas de violencia doméstica.</p>" + 
                     "<p>Esto representa un <strong>" + feature.properties.percentage +
                     "%</strong> del total del riesgo en España.</p>");
             }
